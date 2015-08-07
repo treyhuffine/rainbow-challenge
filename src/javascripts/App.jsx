@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from './vendor/jquery.min';
 
 import FullRainbow from './rainbow/FullRainbow';
+import Sun from './sun/Sun';
 
 // move initializers to separate file
 var rainbowColors = [
@@ -27,10 +28,10 @@ class App extends React.Component {
     let deg = 0;
     let rotationDirection = true;
     var dancingRainbow = function() {
-      if (deg >= 4.5) {
+      if (deg >= 4.2) {
         rotationDirection = false;
       }
-      else if (deg <= -4.5) {
+      else if (deg <= -4.2) {
         rotationDirection = true;
       }
       if (rotationDirection) {
@@ -54,7 +55,10 @@ class App extends React.Component {
   }
   render() {
     return (
-      <FullRainbow rainbowColors={this.state.rainbowColors}/>
+      <div id="app-wrapper">
+        <Sun />
+        <FullRainbow rainbowColors={this.state.rainbowColors}/>
+      </div>
     )
   }
 }

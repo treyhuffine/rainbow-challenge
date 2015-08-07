@@ -9,7 +9,6 @@ let fullRainbow = {
 }
 
 export default class FullRainbow extends React.Component {
-
   render() {
     let rainbowSizes = [50, 45, 40, 35, 30, 25, 20, 15]
     let arches = this.props.rainbowColors.map( (props, idx) =>  {
