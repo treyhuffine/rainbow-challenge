@@ -24,7 +24,16 @@ class App extends React.Component {
     }
   }
   componentDidMount() {
-    // rainbow motion feature
+    let deg = 0;
+    var dancingRainbow = function() {
+      $("#rainbow-wrapper").css({
+        'transform': `rotate(${deg += .1}deg)`,
+        '-moz-transform': `rotate(${deg += .1}deg)`,
+        '-o-transform': `rotate(${deg += .1}deg)`,
+        '-webkit-transform': `rotate(${deg += .1}deg)`
+      })
+    }
+    // setInterval(dancingRainbow, 1);
   }
   render() {
     return (
