@@ -13,7 +13,7 @@ let allSparkles = {
 export default class Sparkles extends React.Component {
   render() {
     let sparkles = [];
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 10; i++) {
       sparkles.push(<SingleSparkle key={i} index={i}/>);
     }
     return (

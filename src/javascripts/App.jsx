@@ -5,6 +5,7 @@ import $ from './vendor/jquery.min';
 import FullRainbow from './rainbow/FullRainbow';
 import Sun from './sun/Sun';
 import Sparkles from './sparkles/Sparkles';
+import RainbowDashboard from './RainbowDashboard';
 
 // move initializers to separate file
 var rainbowColors = [
@@ -24,6 +25,10 @@ class App extends React.Component {
     this.state = {
       rainbowColors: rainbowColors
     }
+    this.showDoubleRainbow = this.showDoubleRainbow.bind(this);
+  }
+  showDoubleRainbow() {
+    $('.rainbow-wrapper').show();
   }
   componentDidMount() {
     let deg = 0;
@@ -53,7 +58,7 @@ class App extends React.Component {
         })
       }
     }
-    setInterval(dancingRainbow, 50);
+    // setInterval(dancingRainbow, 50);
     var dancingSparkles = function() {
       if (hidden) {
         $('.sparkle').show();
@@ -64,11 +69,12 @@ class App extends React.Component {
         hidden = true;
       }
     }
-    setInterval(dancingSparkles,2000);
+    // setInterval(dancingSparkles,2000);
   }
   render() {
     return (
       <div id="app-wrapper">
+        <RainbowDashboard localHandleClick={this.showDoubleRainbow}/>
         <Sun />
         <FullRainbow rainbowColors={this.state.rainbowColors} location={0} isDisplaying={'block'}/>
         <FullRainbow rainbowColors={this.state.rainbowColors} location={50} isDisplaying={'none'}/>

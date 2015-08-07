@@ -1,6 +1,11 @@
 body, html {
   background-color: #7fc6f4;
+  font-family: Sans-Serif;
+  font-weight: lighter;
 }
 html {
   overflow: hidden;
+}
+.double-rainbow:hover {
+  background-color: #64afdf;
 }

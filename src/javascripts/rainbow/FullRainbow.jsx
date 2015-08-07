@@ -1,7 +1,6 @@
 import React from 'react';
 import SingleArch from './SingleArch';
 
-
 export default class FullRainbow extends React.Component {
   render() {
     let fullRainbow = {
