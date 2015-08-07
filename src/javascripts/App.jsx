@@ -28,6 +28,7 @@ class App extends React.Component {
   componentDidMount() {
     let deg = 0;
     let rotationDirection = true;
+    let hidden = false;
     var dancingRainbow = function() {
       if (deg >= 4.2) {
         rotationDirection = false;
@@ -53,6 +54,17 @@ class App extends React.Component {
       }
     }
     setInterval(dancingRainbow, 50);
+    var dancingSparkles = function() {
+      if (hidden) {
+        $('.sparkle').show();
+        hidden = false;
+      }
+      else {
+        $('.sparkle').hide();
+        hidden = true;
+      }
+    }
+    setInterval(dancingSparkles,2000);
   }
   render() {
     return (

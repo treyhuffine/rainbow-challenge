@@ -4,8 +4,8 @@ import SingleSparkle from './SingleSparkle';
 
 let allSparkles = {
   'position': 'relative',
-  'top': '15vh',
-  'left': '10vw',
+  'top': '45vh',
+  'left': '15vw',
   'height': '20vh',
   'width': '50vw'
 }
@@ -13,7 +13,7 @@ let allSparkles = {
 export default class Sparkles extends React.Component {
   render() {
     let sparkles = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 30; i++) {
       sparkles.push(<SingleSparkle key={i} index={i}/>);
     }
     return (

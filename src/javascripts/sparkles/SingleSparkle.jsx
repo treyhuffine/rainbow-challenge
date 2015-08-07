@@ -10,7 +10,7 @@ export default class SingleSparkle extends React.Component {
       'top': `${Math.random() * 20}vh`
     }
     return (
-      <p style={sparkleStyle} className={`sparkle-${this.props.index}`}>sparkle</p>
+      <p style={sparkleStyle} className='sparkle'>sparkle</p>
     )
   }
 }
