@@ -4,6 +4,7 @@ import $ from './vendor/jquery.min';
 
 import FullRainbow from './rainbow/FullRainbow';
 import Sun from './sun/Sun';
+import Sparkles from './sparkles/Sparkles';
 
 // move initializers to separate file
 var rainbowColors = [
@@ -58,6 +59,7 @@ class App extends React.Component {
       <div id="app-wrapper">
         <Sun />
         <FullRainbow rainbowColors={this.state.rainbowColors}/>
+        <Sparkles />
       </div>
     )
   }
