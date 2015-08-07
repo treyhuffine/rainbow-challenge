@@ -25,15 +25,35 @@ class App extends React.Component {
   }
   componentDidMount() {
     let deg = 0;
+    let rotationDirection = true;
     var dancingRainbow = function() {
-      $("#rainbow-wrapper").css({
-        'transform': `rotate(${deg += .1}deg)`,
-        '-moz-transform': `rotate(${deg += .1}deg)`,
-        '-o-transform': `rotate(${deg += .1}deg)`,
-        '-webkit-transform': `rotate(${deg += .1}deg)`
-      })
+      if (Math.floor(deg) === 5) {
+        rotationDirection = false;
+      }
+      else if (deg <= -5) {
+        rotationDirection = true;
+      }
+      console.log(deg);
+      if (rotationDirection) {
+        $("#rainbow-wrapper").css({
+          'transform': `rotate(${deg += .1}deg)`,
+          '-moz-transform': `rotate(${deg += .1}deg)`,
+          '-o-transform': `rotate(${deg += .1}deg)`,
+          '-webkit-transform': `rotate(${deg += .1}deg)`
+        })
+          console.log("right");
+      }
+      else {
+        $("#rainbow-wrapper").css({
+          'transform': `rotate(${deg -= .1}deg)`,
+          '-moz-transform': `rotate(${deg -= .1}deg)`,
+          '-o-transform': `rotate(${deg -= .1}deg)`,
+          '-webkit-transform': `rotate(${deg -= .1}deg)`
+        })
+        console.log("left");
+      }
     }
-    // setInterval(dancingRainbow, 1);
+    setInterval(dancingRainbow, 50);
   }
   render() {
     return (
