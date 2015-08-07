@@ -27,10 +27,10 @@ class App extends React.Component {
     let deg = 0;
     let rotationDirection = true;
     var dancingRainbow = function() {
-      if (Math.floor(deg) === 5) {
+      if (deg >= 4.5) {
         rotationDirection = false;
       }
-      else if (deg <= -5) {
+      else if (deg <= -4.5) {
         rotationDirection = true;
       }
       if (rotationDirection) {
