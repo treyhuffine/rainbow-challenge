@@ -23,7 +23,7 @@ export default class RainbowDashboard extends React.Component {
     return (
       <div style={dashboardStyle}>
         <div style={titleFont}>Dashboard:</div>
-        <span style={buttonFont} className="double-rainbow" onClick={this.props.localHandleClick}>DOUBLE RAINBOW?</span>
+        <span style={buttonFont} className="double-rainbow" onClick={this.props.localHandleClick}>Double Rainbow?!</span>
       </div>
     )
   }
