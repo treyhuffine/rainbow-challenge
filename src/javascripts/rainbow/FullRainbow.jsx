@@ -27,7 +27,7 @@ export default class FullRainbow extends React.Component {
 
   render() {
     let arches = this.props.rainbowColors.map( (props, idx) =>  {
-      return <SingleArch rainbowSpecs={props} key={idx} index={idx} />
+      return <SingleArch rainbowSpecs={props} sizing={idx*5} key={idx} index={idx} />
     })
     return (
       <div id="rainbow-wrapper">

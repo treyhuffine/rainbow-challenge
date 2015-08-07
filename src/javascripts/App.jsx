@@ -4,19 +4,23 @@ import $ from './vendor/jquery.min';
 
 import FullRainbow from './rainbow/FullRainbow';
 
+// move initializers to separate file
+var rainbowColors = [
+  '#7fc6f4',
+  '#8B00FF',
+  '#4B0082',
+  '#0000FF',
+  '#00FF00',
+  '#FFFF00',
+  '#FF7F00',
+  '#FF0000'
+];
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rainbowColors: [
-        '#FF0000',
-        '#FF7F00',
-        '#FFFF00',
-        '#00FF00',
-        '#0000FF',
-        '#4B0082',
-        '#8B00FF'
-      ]
+      rainbowColors: rainbowColors
     }
   }
   componentDidMount() {
