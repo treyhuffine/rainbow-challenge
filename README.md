@@ -1,7 +1,9 @@
 # Rainbow in React
 Build a rainbow, and make it sparkle.
 
-To deploy: `npm install` then `npm start`
+Deployed: [https://rainbows-challenge.herokuapp.com/](https://rainbows-challenge.herokuapp.com/)
+
+To run locally: `npm install` then `npm start`
 
 This is React project using components to build a rainbow in 3 hours. Play around and have some fun!
 

@@ -30,6 +30,9 @@ class App extends React.Component {
   }
   showDoubleRainbow() {
     $('.rainbow-wrapper').show();
+    setTimeout(() => {
+      location.href="https://www.youtube.com/watch?v=MX0D4oZwCsA";
+    }, 2000)
   }
   setSpeed(newSpeed) {
     this.setState(
@@ -37,7 +40,6 @@ class App extends React.Component {
     )
   }
   componentDidMount() {
-    console.log(this.state);
     let deg = 0;
     let rotationDirection = true;
     let hidden = false;
