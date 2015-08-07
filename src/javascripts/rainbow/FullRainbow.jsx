@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SingleArch from './SingleArch'
+
 let firstRainbow = {
   'position': 'absolute',
   'bottom': '10vh',
@@ -22,11 +24,14 @@ let secondRainbow = {
 }
 
 export default class FullRainbow extends React.Component {
+
   render() {
+    let arches = this.props.rainbowColors.map( (props, idx) =>  {
+      return <SingleArch rainbowSpecs={props} key={idx} index={idx} />
+    })
     return (
       <div id="rainbow-wrapper">
-        <div style={secondRainbow}></div>
-        <div style={firstRainbow}></div>
+        {arches}
       </div>
     )
   }
