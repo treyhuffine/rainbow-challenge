@@ -36,7 +36,7 @@ class App extends React.Component {
         rotationDirection = true;
       }
       if (rotationDirection) {
-        $("#rainbow-wrapper").css({
+        $(".rainbow-wrapper").css({
           'transform': `rotate(${deg += .1}deg)`,
           '-moz-transform': `rotate(${deg += .1}deg)`,
           '-o-transform': `rotate(${deg += .1}deg)`,
@@ -44,7 +44,7 @@ class App extends React.Component {
         })
       }
       else {
-        $("#rainbow-wrapper").css({
+        $(".rainbow-wrapper").css({
           'transform': `rotate(${deg -= .1}deg)`,
           '-moz-transform': `rotate(${deg -= .1}deg)`,
           '-o-transform': `rotate(${deg -= .1}deg)`,
@@ -58,7 +58,8 @@ class App extends React.Component {
     return (
       <div id="app-wrapper">
         <Sun />
-        <FullRainbow rainbowColors={this.state.rainbowColors}/>
+        <FullRainbow rainbowColors={this.state.rainbowColors} location={0} isDisplaying={'block'}/>
+        <FullRainbow rainbowColors={this.state.rainbowColors} location={50} isDisplaying={'none'}/>
         <Sparkles />
       </div>
     )
