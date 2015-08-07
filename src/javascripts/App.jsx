@@ -26,11 +26,18 @@ class App extends React.Component {
       rainbowColors: rainbowColors
     }
     this.showDoubleRainbow = this.showDoubleRainbow.bind(this);
+    this.setSpeed = this.setSpeed.bind(this);
   }
   showDoubleRainbow() {
     $('.rainbow-wrapper').show();
   }
+  setSpeed(newSpeed) {
+    this.setState(
+      { speed: newSpeed }
+    )
+  }
   componentDidMount() {
+    console.log(this.state);
     let deg = 0;
     let rotationDirection = true;
     let hidden = false;
@@ -41,24 +48,25 @@ class App extends React.Component {
       else if (deg <= -4.2) {
         rotationDirection = true;
       }
+      // make speed dynamic
       if (rotationDirection) {
         $(".rainbow-wrapper").css({
-          'transform': `rotate(${deg += .1}deg)`,
-          '-moz-transform': `rotate(${deg += .1}deg)`,
-          '-o-transform': `rotate(${deg += .1}deg)`,
-          '-webkit-transform': `rotate(${deg += .1}deg)`
+          'transform': `rotate(${deg += (.1) }deg)`,
+          '-moz-transform': `rotate(${deg += (.1)}deg)`,
+          '-o-transform': `rotate(${deg += (.1)}deg)`,
+          '-webkit-transform': `rotate(${deg += (.1)}deg)`
         })
       }
       else {
         $(".rainbow-wrapper").css({
-          'transform': `rotate(${deg -= .1}deg)`,
-          '-moz-transform': `rotate(${deg -= .1}deg)`,
-          '-o-transform': `rotate(${deg -= .1}deg)`,
-          '-webkit-transform': `rotate(${deg -= .1}deg)`
+          'transform': `rotate(${deg -= (.1)}deg)`,
+          '-moz-transform': `rotate(${deg -= (.1)}deg)`,
+          '-o-transform': `rotate(${deg -= (.1)}deg)`,
+          '-webkit-transform': `rotate(${deg -= (.1)}deg)`
         })
       }
     }
-    // setInterval(dancingRainbow, 50);
+    setInterval(dancingRainbow, 50);
     var dancingSparkles = function() {
       if (hidden) {
         $('.sparkle').show();
@@ -69,12 +77,12 @@ class App extends React.Component {
         hidden = true;
       }
     }
-    // setInterval(dancingSparkles,2000);
+    setInterval(dancingSparkles,2000);
   }
   render() {
     return (
       <div id="app-wrapper">
-        <RainbowDashboard localHandleClick={this.showDoubleRainbow}/>
+        <RainbowDashboard showDoubleRainbow={this.showDoubleRainbow} setSpeed={this.setSpeed}/>
         <Sun />
         <FullRainbow rainbowColors={this.state.rainbowColors} location={0} isDisplaying={'block'}/>
         <FullRainbow rainbowColors={this.state.rainbowColors} location={50} isDisplaying={'none'}/>
