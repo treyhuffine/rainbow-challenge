@@ -13,7 +13,9 @@ let sunStyle = {
 export default class FullRainbow extends React.Component {
   render() {
     return (
-      <div className="sun" style={sunStyle}></div>
+      <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">
+        <div className="sun" style={sunStyle}></div>
+      </a>
     )
   }
 }
