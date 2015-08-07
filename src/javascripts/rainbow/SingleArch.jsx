@@ -6,8 +6,8 @@ export default class SingleArch extends React.Component {
       'position': 'absolute',
       'height': `${this.props.sizing}vh`,
       'width': `${this.props.sizing}vw`,
-      'borderTopLeftRadius': '100vh',
-      'borderTopRightRadius': '100vh',
+      'borderTopLeftRadius': '100vw',
+      'borderTopRightRadius': '100vw',
       'backgroundColor': this.props.rainbowSpecs,
       'bottom': '15vh'
     }
