@@ -1,3 +1,6 @@
 body, html {
   background-color: #7fc6f4;
 }
+html {
+  overflow: hidden;
+}

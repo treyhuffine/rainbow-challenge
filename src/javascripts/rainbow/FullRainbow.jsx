@@ -3,7 +3,7 @@ import SingleArch from './SingleArch';
 
 let fullRainbow = {
   'position': 'relative',
-  'top': '45vh',
+  'top': '55vh',
   'height': '50vh',
   'width': '50vw'
 }
