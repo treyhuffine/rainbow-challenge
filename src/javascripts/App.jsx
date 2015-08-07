@@ -33,7 +33,6 @@ class App extends React.Component {
       else if (deg <= -5) {
         rotationDirection = true;
       }
-      console.log(deg);
       if (rotationDirection) {
         $("#rainbow-wrapper").css({
           'transform': `rotate(${deg += .1}deg)`,
@@ -41,7 +40,6 @@ class App extends React.Component {
           '-o-transform': `rotate(${deg += .1}deg)`,
           '-webkit-transform': `rotate(${deg += .1}deg)`
         })
-          console.log("right");
       }
       else {
         $("#rainbow-wrapper").css({
@@ -50,7 +48,6 @@ class App extends React.Component {
           '-o-transform': `rotate(${deg -= .1}deg)`,
           '-webkit-transform': `rotate(${deg -= .1}deg)`
         })
-        console.log("left");
       }
     }
     setInterval(dancingRainbow, 50);
